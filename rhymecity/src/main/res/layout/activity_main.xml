@@ -4,7 +4,7 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.fly.firefly.MainFragmentActivity" >
+    tools:context="com.fly.firefly.MainFragmentActivity">
 
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -12,7 +12,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="100"
-        android:orientation="vertical" >
+        android:orientation="vertical"
+        android:focusable="true" android:focusableInTouchMode="true">
 
         <FrameLayout
             android:id="@+id/utc_container"
@@ -65,14 +66,15 @@
         <FrameLayout
             android:id="@+id/tab_container"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="50dp"
+            android:visibility="gone"/>
     </LinearLayout>
 
     <fragment
         android:id="@+id/navigation_drawer"
         android:name="com.fly.firefly.drawer.NavigationDrawerFragment"
         android:layout_width="@dimen/navigation_drawer_width"
-        android:layout_height="match_parent"
+        android:layout_height="50dp"
         android:layout_gravity="left"
         tools:layout="@layout/fragment_navigation_drawer" />
 

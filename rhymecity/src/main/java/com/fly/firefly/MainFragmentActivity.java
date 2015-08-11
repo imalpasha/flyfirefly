@@ -39,12 +39,35 @@ public class MainFragmentActivity extends BaseFragmentActivity implements Naviga
         mNavigationDrawerFragment = (NavigationDrawerFragment) getFragmentManager().findFragmentById(R.id.navigation_drawer);
         mNavigationDrawerFragment.setUp(R.id.navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout));
 
+       //FragmentManager fragmentManager = getSupportFragmentManager();
+       //fragmentManager.beginTransaction().replace(R.id.tab_container, TabButtomFragment.newInstance()).commit();
+
+
+        // Inflate the "decor.xml"
+       /* LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        DrawerLayout drawer = (DrawerLayout) inflater.inflate(R.layout.decor, null); // "null" is important.
+
+        // HACK: "steal" the first child of decor view
+        ViewGroup decor = (ViewGroup) getWindow().getDecorView();
+        View child = decor.getChildAt(0);
+       //
+        decor.removeView(child);
+        FrameLayout container = (FrameLayout) drawer.findViewById(R.id.main_activity_fragment_container); // This is the container we defined just now.
+        container.addView(child);
+
+        // Make the drawer replace the first child
+        decor.addView(drawer);
+*/
+        // Do what you want to do.......
+
+
        // FragmentManager fragmentManager = getSupportFragmentManager();
        // fragmentManager.beginTransaction().replace(R.id.main_activity_fragment_container, MainFragment.newInstance()).commit();
 
         //if (savedInstanceState == null) {
         //    goToSearchFragment();
         //}
+
 
     }
 

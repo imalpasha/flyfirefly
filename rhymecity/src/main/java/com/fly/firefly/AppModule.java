@@ -14,7 +14,7 @@ import retrofit.RequestInterceptor;
 import retrofit.RestAdapter;
 
 @Module(
-        injects = RhymeCityApplication.class
+        injects = FireFlyApplication.class
 )
 public class AppModule {
 

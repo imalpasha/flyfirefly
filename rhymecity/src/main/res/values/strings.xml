@@ -1,6 +1,5 @@
 <resources>
 
-    <string name="app_name">Firefly App</string>
 
     <string name="retrieve_rhymes_failed">The network is slow or unavailable</string>
     <string name="no_rhymes_found_error">Couldn\'t find anything that rhymes with %s</string>
@@ -661,5 +660,69 @@
         <string name="agreement">Agreement</string>
         <string name="agree">Agree</string>
 
+
+
+    <!-- HOMEPAGE FIREFLY -->
+
+    <string name="app_name">Firefly</string>
+    <string name="welcome_to_firefly">Welcome to Firefly</string>
+    <string name="beyond_convenience">Beyond Convenience</string>
+    <string name="home_firefly_desc">access your booking,mobile check-in and manage flight by sign-in the system</string>
+    <string name="home_boarding_pass">Boarding \nPass</string>
+    <string name="home_manage_flight">Manage \nFlight</string>
+    <string name="home_book_flight">Book \nFlight</string>
+    <string name="home_mobile_check_in">Mobile \nCheck-In</string>
+    <string name="home_sign_in">SIGN-IN</string>
+
+    <!--LANDSCAPE-->
+
+    <string name="home_book_flight_landscape">Book Flight</string>
+    <string name="home_boarding_pass_landscape">Boarding Pass</string>
+    <string name="home_manage_flight_landscape">Manage Flight</string>
+    <string name="home_mobile_check_in_landscape">Mobile Check-In</string>
+
+
+    <!--END HOMEPAGE FIREFLY-->
+
+    <!-- LOGIN FIREFLY -->
+
+    <string name="login_enter_email">Enter Email :</string>
+    <string name="login_enter_password">Enter Password :</string>
+
+    <string name="login_login_txt">Log in</string>
+    <string name="login_register_txt">Register</string>
+    <string name="login_no_account">Don\'t have account yet? Please register</string>
+
+    <!-- END LOGIN -->
+
+    <!-- REGISTER -->
+
+    <string name="register_continue_button">Continue</string>
+    <string name="register_username">Username </string>
+    <string name="register_password">Password </string>
+    <string name="register_confirm_password">Confirm Password </string>
+
+
+    <string name="register_title">Title </string>
+    <string name="register_firstname">First Name </string>
+    <string name="register_lastname">Last Name </string>
+    <string name="register_dob">Date Of Birth </string>
+
+    <string name="register_basic_information">Basic Information</string>
+    <string name="register_personal_information">Personal Information</string>
+    <string name="register_address_information">Address Information</string>
+    <string name="register_contact_information">Contact Information</string>
+
+    <string name="register_address_1">Address Line 1</string>
+    <string name="register_address_2">Address Line 2</string>
+    <string name="register_country">Country</string>
+    <string name="register_town">Town/City</string>
+    <string name="register_state">State</string>
+    <string name="register_postcode">Postcode</string>
+    <string name="register_mobile_phone">Mobile Phone</string>
+    <string name="register_alternate_phone">Alternate Phone</string>
+    <string name="register_fax">Fax</string>
+
+    <!-- END REGISTER -->
 
 </resources>

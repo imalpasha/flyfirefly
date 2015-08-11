@@ -1,7 +1,6 @@
 package com.fly.firefly.base;
 
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -10,13 +9,14 @@ import android.view.View.OnClickListener;
 
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.actionbarsherlock.internal.widget.ScrollingTabContainerView.TabView;
 import com.fly.firefly.R;
 import com.fly.firefly.utils.App;
-import com.fly.firefly.utils.Utils;
 
 public class BaseFragmentActivity extends SherlockFragmentActivity {
 
     public com.fly.firefly.base.AQuery aq;
+    TabView tabsView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -25,7 +25,7 @@ public class BaseFragmentActivity extends SherlockFragmentActivity {
         aq = new com.fly.firefly.base.AQuery(this);
 
 
-        if ((getApplicationContext().getResources().getConfiguration().screenLayout &
+       /*if ((getApplicationContext().getResources().getConfiguration().screenLayout &
                 android.content.res.Configuration.SCREENLAYOUT_SIZE_MASK) >= android.content.res.Configuration.SCREENLAYOUT_SIZE_LARGE){
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
             getApplicationContext().getResources().getConfiguration().orientation = 2;
@@ -33,22 +33,24 @@ public class BaseFragmentActivity extends SherlockFragmentActivity {
         }else {
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
             getApplicationContext().getResources().getConfiguration().orientation = 1;
-        }
+        }*/
+
 
         try
         {
             ActionBar actionBar = getSupportActionBar();
             actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-            actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
+           // tabsView = new ScrollingTabContainerView(actionBar.getThemedContext());
+             actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
             actionBar.setCustomView(R.layout.actionbar);
             View actionBarView = actionBar.getCustomView();
             aq.recycle(actionBarView);
             aq.id(R.id.title).typeface(Typeface.createFromAsset(getAssets(), App.FONT_HELVETICA_NEUE)).textSize(22).textColor(Color.WHITE);
-            if(Utils.getDeviceType(this) == "1")
-            {
-                aq.id(R.id.tabContainerTablet).visible();
+           // if(Utils.getDeviceType(this) == "1")
+            //{
+             //   aq.id(R.id.tabContainerTablet).visible();
                 //display tab here
-            }
+           // }
         }
         catch (Exception e)
         {

@@ -12,7 +12,7 @@ import javax.inject.Inject;
 import dagger.ObjectGraph;
 import me.mattlogan.rhymecity.Modules;
 
-public class RhymeCityApplication extends Application {
+public class FireFlyApplication extends Application {
 
     private ObjectGraph objectGraph;
 
@@ -41,7 +41,7 @@ public class RhymeCityApplication extends Application {
         return objectGraph.plus(module);
     }
 
-    public static RhymeCityApplication get(Context context) {
-        return (RhymeCityApplication) context.getApplicationContext();
+    public static FireFlyApplication get(Context context) {
+        return (FireFlyApplication) context.getApplicationContext();
     }
 }

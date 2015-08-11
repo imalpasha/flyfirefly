@@ -16,8 +16,8 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.fly.firefly.FireFlyApplication;
 import com.fly.firefly.R;
-import com.fly.firefly.RhymeCityApplication;
 import com.fly.firefly.api.obj.tryObj;
 import com.fly.firefly.ui.activity.FragmentContainerActivity;
 import com.fly.firefly.ui.module.SearchModule;
@@ -56,7 +56,7 @@ public class SearchFragment extends Fragment implements SearchPresenter.SearchVi
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        RhymeCityApplication.get(getActivity()).createScopedGraph(new SearchModule(this)).inject(this);
+        FireFlyApplication.get(getActivity()).createScopedGraph(new SearchModule(this)).inject(this);
     }
 
     @Override
