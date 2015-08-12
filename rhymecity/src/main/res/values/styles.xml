@@ -5,7 +5,7 @@
         <item name="android:actionBarStyle">@style/Theme1.ActionBar</item>
         <item name="homeAsUpIndicator">@drawable/vrsm__ic_back</item>
         <item name="android:windowBackground">@color/white</item>
-
+        <item name="android:windowContentOverlay">@null</item>
     </style>
 
     <style name="Theme1.ActionBar" parent="@style/Widget.Sherlock.Light.ActionBar.Solid">

@@ -12,267 +12,315 @@
         android:weightSum="1">
 
         <LinearLayout
-            android:paddingLeft="30dp"
-            android:paddingRight="30dp"
             android:orientation="vertical"
             android:layout_width="fill_parent"
             android:layout_height="0dp"
-            android:layout_weight="0.35"
-            android:background="@color/home_description_layout"
-            android:gravity="center"
-            android:weightSum="1">
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="fill_parent"
-                android:layout_height="0dp"
-                android:layout_weight="0.25"
-                android:gravity="center">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="@string/welcome_to_firefly"
-                    android:id="@+id/txtWelcomeFirefly"
-                    android:textSize="@dimen/font20sp"
-                    android:textColor="@color/white"
-                    android:textStyle="italic"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="fill_parent"
-                android:layout_height="0dp"
-                android:layout_weight="0.2"
-                android:gravity="center">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="@string/beyond_convenience"
-                    android:id="@+id/txtBeyondConvenience"
-                    android:textColor="@color/dark_lvl2"
-                    android:layout_marginBottom="3dp"
-                    android:textStyle="italic"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="fill_parent"
-                android:layout_height="0dp"
-                android:layout_weight="0.2"
-                android:gravity="center">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:text="@string/home_firefly_desc"
-                    android:id="@+id/txtHomeDescription"
-                    android:textColor="@color/white"
-                    android:gravity="center"
-                    android:textSize="@dimen/font16sp"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="fill_parent"
-                android:layout_height="0dp"
-                android:layout_weight="0.28"
-                android:gravity="center">
-
-                <Button
-                    style="?android:attr/buttonStyleSmall"
-                    android:layout_width="wrap_content"
-                    android:layout_height="25dp"
-                    android:background="@drawable/drawable_home_signin_button"
-                    android:id="@+id/btnSignIn"
-                    android:drawableLeft="@drawable/abs__ic_cab_done_holo_dark"
-                    android:text="@string/home_sign_in"
-                    android:paddingRight="15dp"
-                    android:paddingLeft="15dp"
-                    android:textSize="12dp"
-                    android:layout_marginTop="1dp"
-                    android:textColor="@color/white"
-                    android:elevation="10dp"/>
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="fill_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.65"
+            android:layout_weight="0.41"
             android:background="@drawable/firefly_home">
         </LinearLayout>
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:weightSum="1">
-
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="fill_parent"
             android:layout_height="0dp"
-            android:layout_weight="0.75"
-            android:id="@+id/null1">
+            android:layout_weight="0.5"
+            android:background="@color/dark_lvl1"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:clickable="true"
+                android:background="@drawable/homepage_white_with_gradient"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.25"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.3"
+                    android:layout_height="fill_parent"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView2"
+                        android:layout_gravity="right"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/fly_book_flight"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.7"
+                    android:layout_height="fill_parent"
+                    android:gravity="left|center"
+                    android:paddingLeft="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="@string/home_book_flight"
+                        android:id="@+id/textView10"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/font20sp"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:clickable="true"
+                android:background="@drawable/homepage_white_with_gradient"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.25">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.3"
+                    android:layout_height="fill_parent"
+                    android:gravity="right"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView3"
+                        android:src="@drawable/fly_manage_flight"
+                        android:adjustViewBounds="true"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.7"
+                    android:layout_height="fill_parent"
+                    android:gravity="left|center"
+                    android:paddingLeft="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="@string/home_manage_flight"
+                        android:id="@+id/textView11"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/font20sp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:clickable="true"
+                android:background="@drawable/homepage_white_with_gradient"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.25"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.3"
+                    android:layout_height="fill_parent"
+                    android:gravity="right"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView4"
+                        android:src="@drawable/fly_mobile_checkin"
+                        android:adjustViewBounds="true"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.7"
+                    android:layout_height="fill_parent"
+                    android:gravity="left|center"
+                    android:paddingLeft="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="@string/home_mobile_check_in"
+                        android:id="@+id/textView12"
+                        android:textSize="@dimen/font20sp"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:clickable="true"
+                android:background="@drawable/homepage_white_with_gradient"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.25"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.3"
+                    android:layout_height="fill_parent"
+                    android:gravity="right"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView5"
+                        android:src="@drawable/fly_faq"
+                        android:adjustViewBounds="true"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.7"
+                    android:layout_height="fill_parent"
+                    android:gravity="left|center"
+                    android:paddingLeft="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text="@string/home_faq"
+                        android:textSize="@dimen/font20sp"
+                        android:id="@+id/textView13"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+            </LinearLayout>
+
         </LinearLayout>
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="fill_parent"
             android:layout_height="0dp"
-            android:layout_weight="0.17"
-            android:background="#4D000000"
-            android:layout_alignParentBottom="true"
-            android:gravity="center"
-            android:weightSum="1"
-            android:paddingRight="30dp"
-            android:paddingLeft="30dp">
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="0dp"
-                android:layout_weight="0.25"
-                android:layout_height="fill_parent">
-
-                <ImageView
-                    android:clickable="true"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/imgBookFlight"
-                    android:src="@drawable/drawable_home_bookflight_icon"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="0dp"
-                android:layout_weight="0.25"
-                android:layout_height="fill_parent">
-
-                <ImageView
-                    android:clickable="true"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/imgManageFlight"
-                    android:src="@drawable/drawable_home_manageflight_icon"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="0dp"
-                android:layout_weight="0.25"
-                android:layout_height="fill_parent">
-
-                <ImageView
-                    android:clickable="true"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/imgMobileCheckIn"
-                    android:src="@drawable/drawable_home_mobilecheckin_icon"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="0dp"
-                android:layout_weight="0.25"
-                android:layout_height="fill_parent">
-
-                <ImageView
-                    android:clickable="true"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/imgBoardingPass"
-                    android:src="@drawable/drawable_home_boardingpass_icon"/>
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="fill_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.08"
-            android:background="@color/grey_lvl5"
+            android:layout_weight="0.1"
+            android:background="@color/actionBarColour_default_theme"
             android:weightSum="1"
             android:paddingLeft="30dp"
             android:paddingRight="30dp"
             android:gravity="center">
 
             <LinearLayout
-                android:orientation="vertical"
+                android:orientation="horizontal"
                 android:layout_width="0dp"
-                android:layout_weight="0.25"
+                android:layout_weight="0.3"
                 android:layout_height="fill_parent"
-                android:gravity="center">
+                android:gravity="center"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:gravity="right"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView6"
+                        android:src="@drawable/facebook"
+                        android:padding="5dp"
+                        android:adjustViewBounds="true"/>
+                </LinearLayout>
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="@string/home_book_flight_landscape"
-                    android:id="@+id/textView"
-                    android:gravity="center"
-                    android:textStyle="bold"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:orientation="vertical"
-                android:layout_width="0dp"
-                android:layout_weight="0.25"
-                android:layout_height="fill_parent"
-                android:gravity="center">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="@string/home_manage_flight_landscape"
+                    android:text="@string/firefly_stroke"
                     android:id="@+id/textView6"
-                    android:gravity="center"
                     android:textStyle="bold"/>
+
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="vertical"
+                android:orientation="horizontal"
                 android:layout_width="0dp"
-                android:layout_weight="0.25"
+                android:layout_weight="0.3"
                 android:layout_height="fill_parent"
-                android:gravity="center">
+                android:gravity="center"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_height="wrap_content"
+                    android:gravity="right">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView9"
+                        android:src="@drawable/twitter"
+                        android:padding="5dp"
+                        android:adjustViewBounds="true"/>
+                </LinearLayout>
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.5"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="@string/home_mobile_check_in_landscape"
+                    android:text="@string/firefly_stroke"
                     android:id="@+id/textView7"
-                    android:gravity="center"
                     android:textStyle="bold"/>
+
             </LinearLayout>
 
             <LinearLayout
-                android:orientation="vertical"
+                android:orientation="horizontal"
                 android:layout_width="0dp"
-                android:layout_weight="0.25"
+                android:layout_weight="0.4"
                 android:layout_height="fill_parent"
-                android:gravity="center">
+                android:gravity="center"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.4"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/imageView7"
+                        android:src="@drawable/insta"
+                        android:padding="5dp"
+                        android:adjustViewBounds="true"/>
+                </LinearLayout>
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="0.6"
                     android:layout_height="wrap_content"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:text="@string/home_boarding_pass_landscape"
+                    android:text="@string/firefly_airlines_stroke"
                     android:id="@+id/textView8"
-                    android:gravity="center"
                     android:textStyle="bold"/>
+
             </LinearLayout>
         </LinearLayout>
 

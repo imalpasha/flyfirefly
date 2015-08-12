@@ -40,6 +40,8 @@ public class BaseFragmentActivity extends SherlockFragmentActivity {
         {
             ActionBar actionBar = getSupportActionBar();
             actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+           // actionBar.setElevation(0);
+            //actionBar.setBackgroundDrawable(null);
            // tabsView = new ScrollingTabContainerView(actionBar.getThemedContext());
              actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_STANDARD);
             actionBar.setCustomView(R.layout.actionbar);
@@ -86,6 +88,13 @@ public class BaseFragmentActivity extends SherlockFragmentActivity {
         View actionBarView = getSupportActionBar().getCustomView();
         aq.recycle(actionBarView);
         aq.id(R.id.title).text(title);
+    }
+
+    public void hideTitle()
+    {
+        View actionBarView = getSupportActionBar().getCustomView();
+        aq.recycle(actionBarView);
+        aq.id(R.id.title).visibility(View.GONE);
     }
 
     public void setLogOutButton()

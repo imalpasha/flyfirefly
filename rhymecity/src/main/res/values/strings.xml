@@ -668,11 +668,15 @@
     <string name="welcome_to_firefly">Welcome to Firefly</string>
     <string name="beyond_convenience">Beyond Convenience</string>
     <string name="home_firefly_desc">access your booking,mobile check-in and manage flight by sign-in the system</string>
-    <string name="home_boarding_pass">Boarding \nPass</string>
-    <string name="home_manage_flight">Manage \nFlight</string>
-    <string name="home_book_flight">Book \nFlight</string>
-    <string name="home_mobile_check_in">Mobile \nCheck-In</string>
+    <string name="home_boarding_pass">Boarding Pass</string>
+    <string name="home_manage_flight">Manage Flight</string>
+    <string name="home_book_flight">Book Flight</string>
+    <string name="home_mobile_check_in">Mobile Check-In</string>
     <string name="home_sign_in">SIGN-IN</string>
+    <string name="home_faq">FAQ</string>
+
+    <string name="firefly_stroke">/Firefly</string>
+    <string name="firefly_airlines_stroke">/Firefly Airlines</string>
 
     <!--LANDSCAPE-->
 
