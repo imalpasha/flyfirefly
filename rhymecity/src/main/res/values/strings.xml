@@ -691,7 +691,7 @@
 
     <string name="login_login_txt">Log in</string>
     <string name="login_register_txt">Register</string>
-    <string name="login_no_account">Don\'t have account yet? Please register</string>
+    <string name="login_no_account">Don\'t have account yet?</string>
 
     <!-- END LOGIN -->
 
