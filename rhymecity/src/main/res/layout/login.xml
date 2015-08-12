@@ -8,15 +8,14 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.35">
+        android:layout_height="wrap_content">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imageView"
-            android:src="@drawable/firefly_beyond_icon"
-            android:scaleType="fitCenter"/>
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/top_logo" />
     </LinearLayout>
 
     <LinearLayout
@@ -39,21 +38,32 @@
                 android:paddingTop="10dp">
 
                 <LinearLayout
-                    android:orientation="horizontal"
+                    android:orientation="vertical"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/drawable_login_bottom_border"
-                    android:clickable="true"
-                    android:layout_marginBottom="10dp">
+                    android:background="@drawable/drawable_login_bottom_border">
 
-                   <!-- <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:id="@+id/txtLoginEnterEmail"
-                        android:textColor="@color/loginFontTxt"
-                        android:paddingBottom="10dp"
-                        android:textSize="@dimen/font16sp"/>-->
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="43dp"
+                        android:background="#ee070707">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="LOGIN AND PASSWORD"
+                            android:id="@+id/textView10"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center"
+                            android:textColor="#ffffff" />
+
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="20px" />
 
                     <EditText
                         android:layout_width="fill_parent"
@@ -66,13 +76,24 @@
                         android:textColorHint="@color/loginFontTxt"
                         android:id="@+id/txtLoginEmail" />
 
-                </LinearLayout>
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/drawable_login_bottom_border"
+                        android:clickable="true"
+                        android:layout_marginBottom="10dp">
 
-                <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/drawable_login_bottom_border">
+                       <!-- <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:id="@+id/txtLoginEnterEmail"
+                            android:textColor="@color/loginFontTxt"
+                            android:paddingBottom="10dp"
+                            android:textSize="@dimen/font16sp"/>-->
+
+                    </LinearLayout>
 
                     <EditText
                         android:layout_width="fill_parent"
@@ -116,7 +137,7 @@
                         android:textAppearance="?android:attr/textAppearanceMedium"
                         android:text="@string/login_no_account"
                         android:id="@+id/txtNoAccountYet"
-                        android:textColor="@color/loginNoAccountYet"
+                        android:textColor="#020202"
                         android:textSize="@dimen/font16sp"/>
 
                 </LinearLayout>
@@ -134,7 +155,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/login_register_txt"
                         android:id="@+id/registerBtn"
-                        android:textColor="@color/white"
+                        android:textColor="#fa9f3c"
                         android:textStyle="bold"
                         android:background="@drawable/login_register_button_clicked"/>
                 </LinearLayout>
