@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 import com.fly.firefly.FireFlyApplication;
 import com.fly.firefly.R;
@@ -17,14 +18,14 @@ import com.fly.firefly.ui.presenter.HomePresenter;
 import javax.inject.Inject;
 
 import butterknife.ButterKnife;
+import butterknife.InjectView;
 
 public class HomeFragment extends Fragment implements HomePresenter.HomeView {
 
     @Inject
     HomePresenter presenter;
 
-    //@InjectView(R.id.btnSignIn)
-    //Button signInBtn;
+    @InjectView(R.id.homeBookFlight) LinearLayout bookFlight;
 
     //private ProgressBar progressIndicator;
     private int fragmentContainerId;
@@ -51,12 +52,12 @@ public class HomeFragment extends Fragment implements HomePresenter.HomeView {
         View view = inflater.inflate(R.layout.home, container, false);
         ButterKnife.inject(this, view);
 
-        /*signInBtn.setOnClickListener(new View.OnClickListener() {
+        bookFlight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 goToLoginPage();
             }
-        });*/
+        });
 
         return view;
     }
