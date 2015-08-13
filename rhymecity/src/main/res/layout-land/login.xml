@@ -17,7 +17,8 @@
         android:paddingBottom="10dp">
 
         <LinearLayout
-        android:orientation="vertical"
+        android:background="@drawable/shape_stroke"
+            android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_weight="0.2"
