@@ -21,13 +21,12 @@
             android:layout_height="wrap_content"
             android:visibility="gone" />
 
-        <FrameLayout
+        <!--<FrameLayout
             android:id="@+id/logo_container"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="18"
             android:visibility="visible">
-
         <RelativeLayout
             android:layout_width="fill_parent"
             android:orientation="vertical"
@@ -52,7 +51,7 @@
                 android:src="@drawable/flyfirefly_logo_text"/>
         </RelativeLayout>
 
-        </FrameLayout>
+        </FrameLayout>-->
 
         <FrameLayout
             android:id="@+id/main_activity_fragment_container"
