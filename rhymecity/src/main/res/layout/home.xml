@@ -16,12 +16,11 @@
             android:orientation="vertical"
             android:layout_height="0dp"
             android:layout_weight="0.15"
-            android:layoutDirection="inherit"
             android:background="@color/dark_lvl1" >
 
             <ImageView
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="80dp"
                 android:id="@+id/imageView12"
                 android:scaleType="fitXY"
                 android:adjustViewBounds="true"
@@ -29,7 +28,7 @@
 
             <ImageView
                 android:layout_width="fill_parent"
-                android:layout_height="100dp"
+                android:layout_height="80dp"
                 android:id="@+id/imageView13"
                 android:layout_centerVertical="true"
                 android:padding="10dp"
