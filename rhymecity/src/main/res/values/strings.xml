@@ -722,7 +722,8 @@
     <string name="register_mobile_phone">Mobile Phone</string>
     <string name="register_alternate_phone">Alternate Phone</string>
     <string name="register_fax">Fax</string>
+        <string name="title_login_and_password">LOGIN AND PASSWORD</string>
 
-    <!-- END REGISTER -->
+        <!-- END REGISTER -->
 
 </resources>

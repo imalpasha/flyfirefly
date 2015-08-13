@@ -17,11 +17,6 @@
         android:paddingBottom="10dp">
 
         <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"></LinearLayout>
-
-        <LinearLayout
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -55,7 +50,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:text="LOGIN AND PASSWORD"
+                        android:text="@string/title_login_and_password"
                         android:id="@+id/textView10"
                         android:textColor="@color/white"
                         android:gravity="center" />
@@ -70,8 +65,8 @@
                     android:layout_marginBottom="10dp">
 
                     <Space
-                        android:layout_width="20px"
-                        android:layout_height="50px" />
+                        android:layout_width="20dp"
+                        android:layout_height="30dp" />
 
                     <EditText
                         android:layout_width="fill_parent"
