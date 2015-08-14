@@ -730,9 +730,28 @@
     <string name="title_register">REGISTER</string>
 
     <string name="asterik">*</string>
+    <!-- END REGISTER -->
 
 
+    <!-- BOOKING FLIGHT - SEARCH FLIGHT -->
+    <string name="book_flight">BOOK FLIGHT</string>
+    <string name="book_flight_one_way">ONE WAY</string>
+    <string name="book_flight_return">RETURN</string>
 
-        <!-- END REGISTER -->
+    <string name="book_flight_departure_airport">DEPARTURE AIRPORT</string>
+    <string name="book_flight_arrival_airport">ARRIVAL AIRPORT</string>
+
+    <string name="book_flight_departure_date">DEPARTURE DATE</string>
+    <string name="book_flight_arrival_date">RETURN DATE</string>
+
+    <string name="book_flight_adult">Adult</string>
+    <string name="book_flight_adult_year">12+ years</string>
+
+    <string name="book_flight_children">Children</string>
+    <string name="book_flight_children_year">2 - 12 years</string>
+
+    <string name="book_flight_infant">Infant</string>
+    <string name="book_flight_infant_year">1-23 months</string>
+
 
 </resources>

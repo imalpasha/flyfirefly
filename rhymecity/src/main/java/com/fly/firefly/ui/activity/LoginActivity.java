@@ -2,20 +2,20 @@ package com.fly.firefly.ui.activity;
 
 import android.app.FragmentManager;
 import android.os.Bundle;
+import android.widget.Button;
 
 import com.fly.firefly.MainFragmentActivity;
 import com.fly.firefly.R;
 import com.fly.firefly.ui.fragment.LoginFragment;
 
 import butterknife.ButterKnife;
+import butterknife.InjectView;
 
 //import android.view.WindowManager;
 
 public class LoginActivity extends MainFragmentActivity implements FragmentContainerActivity {
 
-    //implements ToolbarActivity, ProgressIndicatorActivity, FragmentContainerActivity {
-    //@InjectView(R.id.main_activity_toolbar) Toolbar toolbar;
-    //@InjectView(R.id.main_activity_progress_indicator) ProgressBar progressIndicator;
+    //@InjectView(R.id.btnLogin) Button btnLogin;
 
     private FragmentManager fragmentManager;
 
