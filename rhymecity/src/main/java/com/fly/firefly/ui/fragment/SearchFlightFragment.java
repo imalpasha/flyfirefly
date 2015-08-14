@@ -7,7 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.fly.firefly.FireFlyApplication;
 import com.fly.firefly.R;
@@ -16,6 +18,7 @@ import com.fly.firefly.ui.activity.RegisterActivity;
 import com.fly.firefly.ui.module.SearchFlightModule;
 import com.fly.firefly.ui.presenter.LoginPresenter;
 import com.fly.firefly.ui.presenter.SearchFlightPresenter;
+import com.fly.firefly.utils.Utils;
 
 import javax.inject.Inject;
 
@@ -31,9 +34,18 @@ public class SearchFlightFragment extends Fragment implements SearchFlightPresen
     @InjectView(R.id.btnOneWay) LinearLayout btnOneWay;
     @InjectView(R.id.returnDateBlock) LinearLayout returnDateBlock;
 
+    @InjectView(R.id.btnAdultIncrease) ImageView btnAdultIncrease;
+    @InjectView(R.id.btnAdultDecrease) ImageView btnAdultDecrease;
 
+    @InjectView(R.id.txtAdultTotal) TextView txtAdultTotal;
 
+    private final String RETURN = "RETURN";
+    private final String ONEWAY = "ONEWAY";
+    private final String ADULT = "ADULT";
+    private int totalAdult = 1;
     private int fragmentContainerId;
+    private boolean blockAdult = false;
+    private boolean blockAdultNumber = false;
 
     public static SearchFlightFragment newInstance() {
 
@@ -59,14 +71,15 @@ public class SearchFlightFragment extends Fragment implements SearchFlightPresen
 
         /*Initial*/
         btnOneWay.setBackgroundColor(getResources().getColor(R.color.grey));
+        txtAdultTotal.setText("1");
 
         /*Return Button Clicked*/
         btnReturn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                returnDateBlock.setVisibility(View.VISIBLE);
-                btnReturn.setBackgroundColor(getResources().getColor(R.color.white));
-                btnOneWay.setBackgroundColor(getResources().getColor(R.color.grey));
+
+                switchWay(RETURN);
+
             }
         });
 
@@ -74,11 +87,42 @@ public class SearchFlightFragment extends Fragment implements SearchFlightPresen
         btnOneWay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                returnDateBlock.setVisibility(View.GONE);
-                btnReturn.setBackgroundColor(getResources().getColor(R.color.grey));
-                btnOneWay.setBackgroundColor(getResources().getColor(R.color.white));
+
+                switchWay(ONEWAY);
+
             }
         });
+
+        /*Add Adult Button Clicked*/
+        btnAdultIncrease.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if(!blockAdult){
+                   totalAdult++;
+                   setPassengerTotal(ADULT);
+               }
+
+            }
+        });
+
+         /*Remove Adult Button Clicked*/
+        btnAdultDecrease.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if(totalAdult == 1){
+                    blockAdultNumber = true;
+                }
+
+                if(!blockAdultNumber){
+                    totalAdult--;
+                    setPassengerTotal(ADULT);
+                }
+            }
+        });
+
+
         return view;
     }
 
@@ -87,6 +131,40 @@ public class SearchFlightFragment extends Fragment implements SearchFlightPresen
     {
         Intent loginPage = new Intent(getActivity(), RegisterActivity.class);
         getActivity().startActivity(loginPage);
+    }
+
+    //Switch Flight Type
+    public void switchWay(String way)
+    {
+        if(way == RETURN) {
+            returnDateBlock.setVisibility(View.VISIBLE);
+            btnReturn.setBackgroundColor(getResources().getColor(R.color.white));
+            btnOneWay.setBackgroundColor(getResources().getColor(R.color.grey));
+        }else {
+            returnDateBlock.setVisibility(View.GONE);
+            btnReturn.setBackgroundColor(getResources().getColor(R.color.grey));
+            btnOneWay.setBackgroundColor(getResources().getColor(R.color.white));
+        }
+    }
+
+    public void setPassengerTotal(String passenger) {
+
+        if (passenger == ADULT) {
+            if(totalAdult < 10 && totalAdult > 0) {
+                txtAdultTotal.setText(Integer.toString(totalAdult));
+                blockAdult = false;
+                blockAdultNumber = false;
+            }
+            else if(totalAdult == 9) {
+                Utils.toastNotification(getActivity(), "Limit is 9");
+                blockAdult = true;
+            }
+            else
+            {
+                blockAdultNumber = true;
+            }
+
+        }
     }
 
     @Override

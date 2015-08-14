@@ -370,7 +370,7 @@
                                 android:orientation="horizontal"
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
-                                android:layout_weight="0.3"
+                                android:layout_weight="0.4"
                                 android:layout_marginTop="15dp"
                                 >
 
@@ -384,7 +384,7 @@
                                     <ImageView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:id="@+id/imageView19"
+                                        android:id="@+id/btnAdultDecrease"
                                         android:src="@drawable/abs__ab_bottom_solid_dark_holo"
                                         android:scaleType="fitXY"
                                         android:adjustViewBounds="true"/>
@@ -401,8 +401,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:textAppearance="?android:attr/textAppearanceSmall"
-                                        android:text="1"
-                                        android:id="@+id/textView21" />
+                                        android:id="@+id/txtAdultTotal" />
                                 </LinearLayout>
 
                                 <LinearLayout
@@ -415,7 +414,7 @@
                                     <ImageView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:id="@+id/imageView20"
+                                        android:id="@+id/btnAdultIncrease"
                                         android:scaleType="fitXY"
                                         android:adjustViewBounds="true"
                                         android:src="@drawable/abs__ab_bottom_solid_dark_holo"/>
@@ -479,7 +478,7 @@
                                 android:orientation="horizontal"
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
-                                android:layout_weight="0.3"
+                                android:layout_weight="0.4"
                                 android:layout_marginTop="15dp" >
 
                                 <LinearLayout
@@ -585,7 +584,7 @@
                                 android:orientation="horizontal"
                                 android:layout_width="match_parent"
                                 android:layout_height="0dp"
-                                android:layout_weight="0.3"
+                                android:layout_weight="0.4"
                                 android:layout_marginTop="15dp" >
 
                                 <LinearLayout
