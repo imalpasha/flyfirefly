@@ -729,6 +729,10 @@
     <string name="register_fax">Fax</string>
     <string name="title_register">REGISTER</string>
 
+    <string name="asterik">*</string>
+
+
+
         <!-- END REGISTER -->
 
 </resources>
