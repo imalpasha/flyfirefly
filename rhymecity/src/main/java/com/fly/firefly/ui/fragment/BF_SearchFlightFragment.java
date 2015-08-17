@@ -1,8 +1,11 @@
 package com.fly.firefly.ui.fragment;
 
 import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,8 +19,7 @@ import com.fly.firefly.R;
 import com.fly.firefly.ui.activity.FragmentContainerActivity;
 import com.fly.firefly.ui.activity.RegisterActivity;
 import com.fly.firefly.ui.module.SearchFlightModule;
-import com.fly.firefly.ui.presenter.LoginPresenter;
-import com.fly.firefly.ui.presenter.SearchFlightPresenter;
+import com.fly.firefly.ui.presenter.BF_SearchFlightPresenter;
 import com.fly.firefly.utils.Utils;
 
 import javax.inject.Inject;
@@ -25,10 +27,10 @@ import javax.inject.Inject;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
-public class SearchFlightFragment extends Fragment implements SearchFlightPresenter.SearchFlightView {
+public class BF_SearchFlightFragment extends Fragment implements BF_SearchFlightPresenter.SearchFlightView {
 
     @Inject
-    SearchFlightPresenter presenter;
+    BF_SearchFlightPresenter presenter;
 
     @InjectView(R.id.btnReturn) LinearLayout btnReturn;
     @InjectView(R.id.btnOneWay) LinearLayout btnOneWay;
@@ -37,19 +39,41 @@ public class SearchFlightFragment extends Fragment implements SearchFlightPresen
     @InjectView(R.id.btnAdultIncrease) ImageView btnAdultIncrease;
     @InjectView(R.id.btnAdultDecrease) ImageView btnAdultDecrease;
 
+    @InjectView(R.id.btnChildIncrease) ImageView btnChildIncrease;
+    @InjectView(R.id.btnChildDecrease) ImageView btnChildDecrease;
+
+    @InjectView(R.id.btnInfantIncrease) ImageView btnInfantIncrease;
+    @InjectView(R.id.btnInfantDecrease) ImageView btnInfantDecrease;
+
     @InjectView(R.id.txtAdultTotal) TextView txtAdultTotal;
+    @InjectView(R.id.txtChildTotal) TextView txtChildTotal;
+    @InjectView(R.id.txtInfantTotal) TextView txtInfantTotal;
+
+    @InjectView(R.id.btnSearchFlight) Button btnSearchFlight;
 
     private final String RETURN = "RETURN";
     private final String ONEWAY = "ONEWAY";
     private final String ADULT = "ADULT";
+    private final String CHILDREN = "CHILDREN";
+    private final String INFANT = "INFANT";
+
     private int totalAdult = 1;
+    private int totalChildren = 0;
+    private int totalInfant = 0;
+
     private int fragmentContainerId;
     private boolean blockAdult = false;
     private boolean blockAdultNumber = false;
 
-    public static SearchFlightFragment newInstance() {
+    private boolean blockChild = false;
+    private boolean blockChildNumber = false;
 
-        SearchFlightFragment fragment = new SearchFlightFragment();
+    private boolean blockInfant = false;
+    private boolean blockInfantNumber = false;
+
+    public static BF_SearchFlightFragment newInstance() {
+
+        BF_SearchFlightFragment fragment = new BF_SearchFlightFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -72,14 +96,14 @@ public class SearchFlightFragment extends Fragment implements SearchFlightPresen
         /*Initial*/
         btnOneWay.setBackgroundColor(getResources().getColor(R.color.grey));
         txtAdultTotal.setText("1");
+        txtChildTotal.setText("0");
+        //txtInfantTotal.setText("0");
 
         /*Return Button Clicked*/
         btnReturn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 switchWay(RETURN);
-
             }
         });
 
@@ -87,13 +111,11 @@ public class SearchFlightFragment extends Fragment implements SearchFlightPresen
         btnOneWay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 switchWay(ONEWAY);
-
             }
         });
 
-        /*Add Adult Button Clicked*/
+        /*Add & Remove ADULT Button */
         btnAdultIncrease.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -102,11 +124,9 @@ public class SearchFlightFragment extends Fragment implements SearchFlightPresen
                    totalAdult++;
                    setPassengerTotal(ADULT);
                }
-
             }
         });
 
-         /*Remove Adult Button Clicked*/
         btnAdultDecrease.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -114,13 +134,83 @@ public class SearchFlightFragment extends Fragment implements SearchFlightPresen
                 if(totalAdult == 1){
                     blockAdultNumber = true;
                 }
-
                 if(!blockAdultNumber){
                     totalAdult--;
                     setPassengerTotal(ADULT);
                 }
             }
         });
+
+        /* END ADULT*/
+
+        /*Add & Remove CHILDREN Button */
+        btnChildIncrease.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!blockChild){
+                    totalChildren++;
+                    setPassengerTotal(CHILDREN);
+                }
+            }
+        });
+
+        btnChildDecrease.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if(totalChildren == 1){
+                    blockChildNumber = true;
+                }
+
+                if(!blockChildNumber){
+                    totalChildren--;
+                    setPassengerTotal(CHILDREN);
+                }
+            }
+        });
+
+        /* END - CHILDREN */
+
+        /*Add & Remove INFANT Button */
+        btnInfantIncrease.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!blockInfant){
+                    totalInfant++;
+                    setPassengerTotal(INFANT);
+                }
+            }
+        });
+
+        btnInfantDecrease.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if(totalInfant == 1){
+                    blockInfantNumber = true;
+                }
+
+                if(!blockInfantNumber){
+                    totalInfant--;
+                    setPassengerTotal(INFANT);
+                }
+            }
+        });
+
+        /* END - INFANT */
+
+        btnSearchFlight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.main_activity_fragment_container, BF_FlightDetailFragment.newInstance(), "FLIGHT_DETAIL");
+                fragmentTransaction.addToBackStack(null);
+                fragmentTransaction.commit();
+            }
+        });
+
 
 
         return view;
@@ -165,6 +255,38 @@ public class SearchFlightFragment extends Fragment implements SearchFlightPresen
             }
 
         }
+        else if(passenger == CHILDREN)
+        {
+            if(totalChildren < 10 && totalChildren > 0) {
+                txtChildTotal.setText(Integer.toString(totalChildren));
+                blockChild = false;
+                blockChildNumber = false;
+            }
+            else if(totalChildren == 9) {
+                Utils.toastNotification(getActivity(), "Limit is 9");
+                blockChild = true;
+            }
+            else
+            {
+                blockChildNumber = true;
+            }
+        }
+        else if(passenger == INFANT)
+        {
+            if(totalInfant < 10 && totalInfant > 0) {
+                txtInfantTotal.setText(Integer.toString(totalInfant));
+                blockInfant = false;
+                blockInfantNumber = false;
+            }
+            else if(totalInfant == 9) {
+                Utils.toastNotification(getActivity(), "Limit is 9");
+                blockInfant = true;
+            }
+            else
+            {
+                blockInfantNumber = true;
+            }
+        }
     }
 
     @Override
@@ -177,6 +299,7 @@ public class SearchFlightFragment extends Fragment implements SearchFlightPresen
     public void onResume() {
         super.onResume();
         presenter.onResume();
+        Log.e("RESUME","TRUE");
     }
 
     @Override

@@ -3,16 +3,16 @@ package com.fly.firefly.ui.presenter;
 import com.fly.firefly.rhymes.RhymesRequestedEvent;
 import com.squareup.otto.Bus;
 
-public class SearchFlightPresenter {
+public class BF_FlightDetailPresenter {
 
-    public interface SearchFlightView {
+    public interface FlightDetailView {
 
     }
 
-    private final SearchFlightView view;
+    private final FlightDetailView view;
     private final Bus bus;
 
-    public SearchFlightPresenter(SearchFlightView view, Bus bus) {
+    public BF_FlightDetailPresenter(FlightDetailView view, Bus bus) {
         this.view = view;
         this.bus = bus;
     }
