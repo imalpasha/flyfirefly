@@ -1,38 +1,39 @@
-package com.fly.firefly.ui.fragment;
+package com.fly.firefly.ui.fragment.BookingFlight;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.Button;
 
 import com.fly.firefly.FireFlyApplication;
 import com.fly.firefly.R;
+import com.fly.firefly.ui.activity.BookingFlight.SeatSelectionActivity;
 import com.fly.firefly.ui.activity.FragmentContainerActivity;
+import com.fly.firefly.ui.activity.Register.RegisterActivity;
 import com.fly.firefly.ui.module.PersonalDetailModule;
-import com.fly.firefly.ui.module.SearchFlightModule;
 import com.fly.firefly.ui.presenter.BF_PersonalDetailPresenter;
-import com.fly.firefly.ui.presenter.BF_SearchFlightPresenter;
 
 import javax.inject.Inject;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
-public class BF_PersonalDetailFragment extends Fragment implements BF_PersonalDetailPresenter.PersonalDetailView {
+public class PersonalDetailFragment extends Fragment implements BF_PersonalDetailPresenter.PersonalDetailView {
 
     @Inject
     BF_PersonalDetailPresenter presenter;
 
-   // @InjectView(R.id.txtInfantTotal) TextView txtInfantTotal;
+   @InjectView(R.id.btnSeatSelection) Button btnSeatSelection;
 
     private int fragmentContainerId;
 
 
-    public static BF_PersonalDetailFragment newInstance() {
+    public static PersonalDetailFragment newInstance() {
 
-        BF_PersonalDetailFragment fragment = new BF_PersonalDetailFragment();
+        PersonalDetailFragment fragment = new PersonalDetailFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -52,7 +53,23 @@ public class BF_PersonalDetailFragment extends Fragment implements BF_PersonalDe
         View view = inflater.inflate(R.layout.personal_detail, container, false);
         ButterKnife.inject(this, view);
 
+        btnSeatSelection.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                goSeatSelectionPage();
+
+            }
+        });
+
+
         return view;
+    }
+
+    public void goSeatSelectionPage()
+    {
+        Intent seatSelection = new Intent(getActivity(), SeatSelectionActivity.class);
+        getActivity().startActivity(seatSelection);
     }
 
     @Override

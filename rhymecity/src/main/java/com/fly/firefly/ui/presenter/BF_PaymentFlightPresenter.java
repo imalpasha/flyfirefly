@@ -1,18 +1,18 @@
 package com.fly.firefly.ui.presenter;
 
-        import com.fly.firefly.rhymes.RhymesRequestedEvent;
-        import com.squareup.otto.Bus;
+import com.fly.firefly.rhymes.RhymesRequestedEvent;
+import com.squareup.otto.Bus;
 
-public class BF_SearchFlightPresenter {
+public class BF_PaymentFlightPresenter {
 
-    public interface SearchFlightView {
+    public interface PaymentFlightView {
 
     }
 
-    private final SearchFlightView view;
+    private final PaymentFlightView view;
     private final Bus bus;
 
-    public BF_SearchFlightPresenter(SearchFlightView view, Bus bus) {
+    public BF_PaymentFlightPresenter(PaymentFlightView view, Bus bus) {
         this.view = view;
         this.bus = bus;
     }

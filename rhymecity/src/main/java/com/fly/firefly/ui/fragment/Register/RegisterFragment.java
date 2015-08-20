@@ -1,4 +1,4 @@
-package com.fly.firefly.ui.fragment;
+package com.fly.firefly.ui.fragment.Register;
 
 import android.app.Fragment;
 import android.os.Bundle;

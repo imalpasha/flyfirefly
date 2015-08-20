@@ -1,11 +1,12 @@
-package com.fly.firefly.ui.activity;
+package com.fly.firefly.ui.activity.Register;
 
 import android.app.FragmentManager;
 import android.os.Bundle;
 
 import com.fly.firefly.MainFragmentActivity;
 import com.fly.firefly.R;
-import com.fly.firefly.ui.fragment.RegisterFragment;
+import com.fly.firefly.ui.activity.FragmentContainerActivity;
+import com.fly.firefly.ui.fragment.Register.RegisterFragment;
 
 import butterknife.ButterKnife;
 

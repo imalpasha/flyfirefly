@@ -55,7 +55,7 @@
                     android:orientation="vertical"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
-                    android:padding="10dp"
+                    android:padding="5dp"
                     android:layout_marginBottom="5dp"
                     android:background="@drawable/shape_stroke">
 
@@ -104,198 +104,223 @@
                             android:orientation="vertical"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:layout_marginTop="15dp"
-                            android:paddingBottom="15dp"
-                            android:background="@drawable/drawable_login_bottom_border">
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:background="@color/actionBarColour_default_theme">
 
-
-                        <TextView
+                            <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Title."
-                                android:id="@+id/textView16"
+                                android:text="Main Passenger"
+                                android:id="@+id/textView32"
+                                android:textSize="@dimen/font20sp"
+                                android:textColor="@color/white"
                                 android:textStyle="bold"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="5dp">
 
                             <LinearLayout
                                 android:orientation="vertical"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:background="@drawable/block_with_border"
-                                android:layout_marginTop="5dp">
+                                android:layout_marginTop="15dp"
+                                android:paddingBottom="15dp"
+                                android:background="@drawable/drawable_login_bottom_border">
+
+
+                            <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Title."
+                                    android:id="@+id/textView16"
+                                    android:textStyle="bold"/>
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/block_with_border"
+                                    android:layout_marginTop="5dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Mr."
+                                        android:padding="5dp"
+                                        android:textStyle="bold"
+                                        android:id="@+id/textView17" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="15dp"
+                                android:paddingBottom="15dp"
+                                android:background="@drawable/drawable_login_bottom_border" >
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="Mr."
-                                    android:padding="5dp"
-                                    android:textStyle="bold"
-                                    android:id="@+id/textView17" />
+                                    android:text="First Name"
+                                    android:id="@+id/textView18"
+                                    android:textStyle="bold"/>
 
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/block_with_border"
+                                    android:layout_marginTop="5dp" >
+
+                                    <EditText
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:padding="5dp"
+                                        android:id="@+id/textView19"
+                                        android:background="@null"/>
+                                </LinearLayout>
                             </LinearLayout>
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="15dp"
-                            android:paddingBottom="15dp"
-                            android:background="@drawable/drawable_login_bottom_border" >
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="First Name"
-                                android:id="@+id/textView18"
-                                android:textStyle="bold"/>
 
                             <LinearLayout
                                 android:orientation="vertical"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:background="@drawable/block_with_border"
-                                android:layout_marginTop="5dp" >
-
-                                <EditText
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:padding="5dp"
-                                    android:id="@+id/textView19"
-                                    android:background="@null"/>
-                            </LinearLayout>
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="15dp"
-                            android:paddingBottom="15dp"
-                            android:background="@drawable/drawable_login_bottom_border"  >
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Last Name"
-                                android:id="@+id/textView20"
-                                android:textStyle="bold"/>
-
-                            <LinearLayout
-                                android:orientation="vertical"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:background="@drawable/block_with_border"
-                                android:layout_marginTop="5dp" >
-
-                                <EditText
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:padding="5dp"
-                                    android:id="@+id/editText2"
-                                    android:background="@null" />
-                            </LinearLayout>
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="15dp"
-                            android:paddingBottom="15dp"
-                            android:background="@drawable/drawable_login_bottom_border"  >
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Date Of Birth"
-                                android:id="@+id/textView24"
-                                android:textStyle="bold"/>
-
-                            <LinearLayout
-                                android:orientation="horizontal"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:weightSum="1"
-                                android:layout_marginTop="5dp">
-
-                                <LinearLayout
-                                    android:orientation="vertical"
-                                    android:layout_width="0dp"
-                                    android:layout_weight="0.3"
-                                    android:layout_height="match_parent"
-                                    android:background="@drawable/block_with_border"
-                                    android:padding="5dp"
-                                    >
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="Day"
-                                        android:id="@+id/textView21" />
-                                </LinearLayout>
-
-                                <LinearLayout
-                                    android:orientation="vertical"
-                                    android:layout_width="0dp"
-                                    android:layout_weight="0.4"
-                                    android:layout_height="match_parent"
-                                    android:background="@drawable/block_with_border"
-                                    android:padding="5dp"
-                                    android:layout_marginLeft="3dp"
-                                    android:layout_marginRight="3dp">
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="Month"
-                                        android:id="@+id/textView22" />
-                                </LinearLayout>
-
-                                <LinearLayout
-                                    android:orientation="vertical"
-                                    android:layout_width="0dp"
-                                    android:layout_weight="0.3"
-                                    android:layout_height="match_parent"
-                                    android:background="@drawable/block_with_border"
-                                    android:padding="5dp">
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:text="Year"
-                                        android:id="@+id/textView23" />
-                                </LinearLayout>
-                            </LinearLayout>
-
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:orientation="vertical"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_marginTop="15dp"
-                            android:paddingBottom="15dp"
-                            android:background="@drawable/drawable_login_bottom_border">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Nationality."
-                                android:id="@+id/textView25"
-                                android:textStyle="bold"/>
-
-                            <LinearLayout
-                                android:orientation="vertical"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:background="@drawable/block_with_border"
-                                android:layout_marginTop="5dp" >
+                                android:layout_marginTop="15dp"
+                                android:paddingBottom="15dp"
+                                android:background="@drawable/drawable_login_bottom_border"  >
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:padding="5dp"
-                                    android:id="@+id/textView26" />
+                                    android:text="Last Name"
+                                    android:id="@+id/textView20"
+                                    android:textStyle="bold"/>
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/block_with_border"
+                                    android:layout_marginTop="5dp" >
+
+                                    <EditText
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:padding="5dp"
+                                        android:id="@+id/editText2"
+                                        android:background="@null" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="15dp"
+                                android:paddingBottom="15dp"
+                                android:background="@drawable/drawable_login_bottom_border"  >
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Date Of Birth"
+                                    android:id="@+id/textView24"
+                                    android:textStyle="bold"/>
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:weightSum="1"
+                                    android:layout_marginTop="5dp">
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="0.3"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/block_with_border"
+                                        android:padding="5dp"
+                                        >
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Day"
+                                            android:id="@+id/textView21" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="0.4"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/block_with_border"
+                                        android:padding="5dp"
+                                        android:layout_marginLeft="3dp"
+                                        android:layout_marginRight="3dp">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Month"
+                                            android:id="@+id/textView22" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:orientation="vertical"
+                                        android:layout_width="0dp"
+                                        android:layout_weight="0.3"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/block_with_border"
+                                        android:padding="5dp">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Year"
+                                            android:id="@+id/textView23" />
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="15dp"
+                                android:paddingBottom="15dp"
+                                android:background="@drawable/drawable_login_bottom_border">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Nationality."
+                                    android:id="@+id/textView25"
+                                    android:textStyle="bold"/>
+
+                                <LinearLayout
+                                    android:orientation="vertical"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@drawable/block_with_border"
+                                    android:layout_marginTop="5dp" >
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:padding="5dp"
+                                        android:id="@+id/textView26" />
+                                </LinearLayout>
                             </LinearLayout>
                         </LinearLayout>
 
@@ -322,8 +347,8 @@
                         android:layout_width="0dp"
                         android:layout_weight="0.5"
                         android:layout_height="wrap_content"
-                        android:text="Search"
-                        android:id="@+id/button2" />
+                        android:text="Next"
+                        android:id="@+id/btnSeatSelection" />
                 </LinearLayout>
 
             </LinearLayout>

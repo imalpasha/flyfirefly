@@ -1,17 +1,18 @@
-package com.fly.firefly.ui.activity;
+package com.fly.firefly.ui.activity.BookingFlight;
 
 import android.app.FragmentManager;
 import android.os.Bundle;
 
 import com.fly.firefly.MainFragmentActivity;
 import com.fly.firefly.R;
-import com.fly.firefly.ui.fragment.BF_SearchFlightFragment;
+import com.fly.firefly.ui.activity.FragmentContainerActivity;
+import com.fly.firefly.ui.fragment.BookingFlight.PersonalDetailFragment;
 
 import butterknife.ButterKnife;
 
 //import android.view.WindowManager;
 
-public class BookingFlightActivity extends MainFragmentActivity implements FragmentContainerActivity {
+public class PersonalDetailActivity extends MainFragmentActivity implements FragmentContainerActivity {
 
     //implements ToolbarActivity, ProgressIndicatorActivity, FragmentContainerActivity {
     //@InjectView(R.id.main_activity_toolbar) Toolbar toolbar;
@@ -25,8 +26,7 @@ public class BookingFlightActivity extends MainFragmentActivity implements Fragm
         super.onCreate(savedInstanceState);
         ButterKnife.inject(this);
 
-        fragmentManager.beginTransaction().add(R.id.main_activity_fragment_container, BF_SearchFlightFragment.newInstance()).commit();
-
+        fragmentManager.beginTransaction().add(R.id.main_activity_fragment_container, PersonalDetailFragment.newInstance()).commit();
         hideTitle();
     }
 
@@ -36,14 +36,14 @@ public class BookingFlightActivity extends MainFragmentActivity implements Fragm
                 .commit();
     }*/
 
-   @Override
+    /*@Override
     public void onBackPressed() {
         if (fragmentManager.getBackStackEntryCount() > 0) {
             fragmentManager.popBackStack();
         } else {
             super.onBackPressed();
         }
-    }
+    }*/
 
     /*@Override
     public ProgressBar getProgressIndicator() {

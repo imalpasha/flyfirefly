@@ -1,4 +1,4 @@
-package com.fly.firefly.ui.fragment;
+package com.fly.firefly.ui.fragment.BookingFlight;
 
 import android.app.Fragment;
 import android.content.Intent;
@@ -6,33 +6,37 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
+import android.widget.Button;
 
 import com.fly.firefly.FireFlyApplication;
 import com.fly.firefly.R;
 import com.fly.firefly.ui.activity.FragmentContainerActivity;
-import com.fly.firefly.ui.activity.LoginActivity;
-import com.fly.firefly.ui.module.HomeModule;
-import com.fly.firefly.ui.presenter.HomePresenter;
+import com.fly.firefly.ui.activity.Register.RegisterActivity;
+import com.fly.firefly.ui.module.PaymentFlightModule;
+import com.fly.firefly.ui.module.PersonalDetailModule;
+import com.fly.firefly.ui.module.SeatSelectionModule;
+import com.fly.firefly.ui.presenter.BF_PaymentFlightPresenter;
+import com.fly.firefly.ui.presenter.BF_PersonalDetailPresenter;
+import com.fly.firefly.ui.presenter.SeatSelectionPresenter;
 
 import javax.inject.Inject;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
-public class HomeFragment extends Fragment implements HomePresenter.HomeView {
+public class PaymentFlightFragment extends Fragment implements BF_PaymentFlightPresenter.PaymentFlightView {
 
     @Inject
-    HomePresenter presenter;
+    BF_PaymentFlightPresenter presenter;
 
-    @InjectView(R.id.homeBookFlight) LinearLayout bookFlight;
+    //@InjectView(R.id.btnPayment) Button btnPayment ;
 
-    //private ProgressBar progressIndicator;
     private int fragmentContainerId;
 
-    public static HomeFragment newInstance() {
 
-        HomeFragment fragment = new HomeFragment();
+    public static PaymentFlightFragment newInstance() {
+
+        PaymentFlightFragment fragment = new PaymentFlightFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -43,38 +47,23 @@ public class HomeFragment extends Fragment implements HomePresenter.HomeView {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        FireFlyApplication.get(getActivity()).createScopedGraph(new HomeModule(this)).inject(this);
+        FireFlyApplication.get(getActivity()).createScopedGraph(new PaymentFlightModule(this)).inject(this);
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
 
-        View view = inflater.inflate(R.layout.home, container, false);
+        View view = inflater.inflate(R.layout.payment_flight, container, false);
         ButterKnife.inject(this, view);
-
-        bookFlight.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                goToLoginPage();
-            }
-        });
 
         return view;
     }
 
-    /*Public-Inner Func*/
-    public void goToLoginPage()
-    {
-        Intent loginPage = new Intent(getActivity(), LoginActivity.class);
-        getActivity().startActivity(loginPage);
-    }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        //progressIndicator = ((ProgressIndicatorActivity) getActivity()).getProgressIndicator();
         fragmentContainerId = ((FragmentContainerActivity) getActivity()).getFragmentContainerId();
-        //((ToolbarActivity) getActivity()).getToolbar().setTitle(getString(R.string.app_name));
     }
 
     @Override

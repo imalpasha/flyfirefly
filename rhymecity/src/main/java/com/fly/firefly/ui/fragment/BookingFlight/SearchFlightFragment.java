@@ -1,8 +1,6 @@
-package com.fly.firefly.ui.fragment;
+package com.fly.firefly.ui.fragment.BookingFlight;
 
 import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,8 +14,9 @@ import android.widget.TextView;
 
 import com.fly.firefly.FireFlyApplication;
 import com.fly.firefly.R;
+import com.fly.firefly.ui.activity.BookingFlight.FlightDetailActivity;
 import com.fly.firefly.ui.activity.FragmentContainerActivity;
-import com.fly.firefly.ui.activity.RegisterActivity;
+import com.fly.firefly.ui.activity.Register.RegisterActivity;
 import com.fly.firefly.ui.module.SearchFlightModule;
 import com.fly.firefly.ui.presenter.BF_SearchFlightPresenter;
 import com.fly.firefly.utils.Utils;
@@ -27,7 +26,7 @@ import javax.inject.Inject;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
-public class BF_SearchFlightFragment extends Fragment implements BF_SearchFlightPresenter.SearchFlightView {
+public class SearchFlightFragment extends Fragment implements BF_SearchFlightPresenter.SearchFlightView {
 
     @Inject
     BF_SearchFlightPresenter presenter;
@@ -71,9 +70,9 @@ public class BF_SearchFlightFragment extends Fragment implements BF_SearchFlight
     private boolean blockInfant = false;
     private boolean blockInfantNumber = false;
 
-    public static BF_SearchFlightFragment newInstance() {
+    public static SearchFlightFragment newInstance() {
 
-        BF_SearchFlightFragment fragment = new BF_SearchFlightFragment();
+        SearchFlightFragment fragment = new SearchFlightFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -203,11 +202,12 @@ public class BF_SearchFlightFragment extends Fragment implements BF_SearchFlight
             @Override
             public void onClick(View v) {
 
-                FragmentManager fragmentManager = getFragmentManager();
+                goFlightDetailPage();
+                /*FragmentManager fragmentManager = getFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.main_activity_fragment_container, BF_FlightDetailFragment.newInstance(), "FLIGHT_DETAIL");
                 fragmentTransaction.addToBackStack(null);
-                fragmentTransaction.commit();
+                fragmentTransaction.commit();*/
             }
         });
 
@@ -221,6 +221,12 @@ public class BF_SearchFlightFragment extends Fragment implements BF_SearchFlight
     {
         Intent loginPage = new Intent(getActivity(), RegisterActivity.class);
         getActivity().startActivity(loginPage);
+    }
+
+    public void goFlightDetailPage()
+    {
+        Intent flightDetail = new Intent(getActivity(), FlightDetailActivity.class);
+        getActivity().startActivity(flightDetail);
     }
 
     //Switch Flight Type

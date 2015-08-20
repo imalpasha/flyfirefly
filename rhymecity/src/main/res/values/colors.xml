@@ -81,7 +81,8 @@
 
     <color name="registerBasicInfoText">#000000</color>
 
-
+    <!-- BookingFlight -->
+    <color name="myrColour">#141482</color>
 
 
 </resources>
