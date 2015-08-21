@@ -66,8 +66,8 @@ public class HomeFragment extends Fragment implements HomePresenter.HomeView {
     /*Public-Inner Func*/
     public void goToLoginPage()
     {
-       Intent loginPage = new Intent(getActivity(), SeatSelectionActivity.class);
-       //Intent loginPage = new Intent(getActivity(), LoginActivity.class);
+       //Intent loginPage = new Intent(getActivity(), SeatSelectionActivity.class);
+       Intent loginPage = new Intent(getActivity(), LoginActivity.class);
 
         getActivity().startActivity(loginPage);
     }
